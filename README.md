@@ -1,4 +1,4 @@
-		- 搜狗实验室数据资源 （http://www.sogou.com/labs/）  
+- 搜狗实验室数据资源 （http://www.sogou.com/labs/）  
 		  包含了以下五大类数据资源  
 		   1. 评测集合   
 			  1.1 搜索结果评价   

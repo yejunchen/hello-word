@@ -122,12 +122,12 @@
 				相关任务：中文输入法，文字到语音转化，语音识别。  
 				相关技术：2.5，2.6  
 	2. 提出了一些相关技术并进行了实验  
-		2.1 [基于点击数据分析，自动对搜索结果进行评估。](http://www.sogou.com/labs/paper/Automatic_Search_Engine_Performance_Evaluation_with_Click-through_Data_Analysis.pdf)   
+		2.1 基于点击数据分析，自动对搜索结果进行评估。(http://www.sogou.com/labs/paper/Automatic_Search_Engine_Performance_Evaluation_with_Click-through_Data_Analysis.pdf)   
 			- 将搜索分成三种情况：找特定网址、找信息、处理事务。“找特定网址”具有明确的目标特征。因此这里仅考虑这类搜索情况。  
 			- 通过统计搜索词q与搜索结果中点击量最多的链接r，统计（q，r），并在下次给出搜索结果时让r更靠前，如此不断验证。  
 			- 从2006年6月至2007年1月，对sougou.com的检索和点击数据进行统计。  
 			- 准确率为97%左右。错误结果中，一些网址是正确网址的子网站。例如，搜索163通常会定位到163邮箱mail.163.com，而非www.163.com。        
-		2.2 [网络环境下自动进行在线新闻事件的生成。](http://www.sogou.com/labs/paper/Automatic_Online_News_Issue_Construction_in_Web_Environment.pdf)    
+		2.2 网络环境下自动进行在线新闻事件的生成。(http://www.sogou.com/labs/paper/Automatic_Online_News_Issue_Construction_in_Web_Environment.pdf)    
 			- 方法分三步：  
 				1）话题检测，将新出现的文本内容聚类成候选话题。  
 				2）话题对比，候选话题与既有的话题比较，并入既有话题或称为新的话题。  
@@ -149,14 +149,14 @@
 				2）IWF与IDF比较：IWF模型的效果更平滑更优。  
 				3）冗余句子的去除（RSR）：新闻中冗余句子较少，RSR有效果但不明显。  
 				4）标题的使用及权重：加标题表现更好；仅短文加标题比全部加标题更好；标题权重比正文相对更大表现更好。    
-		2.3 [使用与查询无关的特征对网络信息检索数据进行清洗。](http://www.sogou.com/labs/paper/Data_Cleansing_for_Web_Information_Retrieval_using_Query_Independent_Features.pdf)  
+		2.3 使用与查询无关的特征对网络信息检索数据进行清洗。(http://www.sogou.com/labs/paper/Data_Cleansing_for_Web_Information_Retrieval_using_Query_Independent_Features.pdf)  
 			- 若使用普通的链接分析方法，基于网页的被点击概率，而非页面的有用度。因此使用与查询无关的特征。  
 			- 结合利用了链接分析和页面布局分析，进行全局规模的数据清洗。  
 			- 使用朴素贝叶斯学习算法，在低维度实例空间上高效实用，且不需要原有数据集的先验知识。  
 			- 将5个特征：文字长度，链接文本长度，搜索排名值，导入链接数量和导出链接数量综合应用，比仅使用单独一个特征效果更好。  
 			- 清洗后选出的高质量页面占全部的52%（.GOV数据集）和5%（sogou数据集），召回率>90%。即牺牲了10%的正确搜索结果，大大节省了存储空间。  
 			- 同时能够消除30%的垃圾页面和15%的低质量页面。  
-		2.4 [一种基于链接分析的垃圾页面检测算法。](http://www.sogou.com/labs/paper/R-SpamRank_A_Spam_Detection_Algorithm_Based_on_Link_Analysis.pdf)  
+		2.4 一种基于链接分析的垃圾页面检测算法。(http://www.sogou.com/labs/paper/R-SpamRank_A_Spam_Detection_Algorithm_Based_on_Link_Analysis.pdf)  
 			- 一些人试图误导搜索引擎以提升网页的搜索排名，方法主要是基于内容和基于链接两种。这里提出一种半自动的检测基于链接的垃圾网页的方法。  
 			- 使用人工识别的垃圾页面黑名单作为种子，设置高RSR值。根据链接到本页面的情况，反向传播RSR值，并不断迭代直到各页面值稳定。  
 			- 测试数据为sogou.com的500万个网页，迭代50次。人工分析后，不能打开的页面赋值0，好的页面赋值1，半垃圾页面赋值2，纯垃圾页面赋值3。  
@@ -164,7 +164,7 @@
 			- 发现垃圾页面集中在两个域名，说明算法能够检测链接工厂。  
 			- 做域名清理，即删除3个链接工厂下的所有页面后再分析。剩下的178个页面中仍有87.1%的垃圾页面。  
 			- 前5大链接工厂产生了99.1%的垃圾页面。  
-		2.5 [基于相对条件熵的搭配抽取方法。](http://www.sogou.com/labs/paper/Wangdaliang_JoBUPT_07.pdf)   
+		2.5 基于相对条件熵的搭配抽取方法。(http://www.sogou.com/labs/paper/Wangdaliang_JoBUPT_07.pdf)   
 			- 在自然语言处理中，研究搭配组词项之间的内在倾向性。提出使用相对条件熵比传统的使用互信息评价二元相关性更优。  
 			- 词语在语料库中出现越频繁，越容易失去倾向的特性。  
 			- 绝大多数次的左搭配力大于自己的右搭配力。  
@@ -174,7 +174,7 @@
 				2）数据统计：利用词性过滤模板、滑动窗口生成搭配候选二元组统计矩阵，同时统计二元同现次数、构成次的词频以及样本总词频。  
 				3）搭配抽取：计算候选二元组左、右搭配倾向强度以及搭配整合强度，依据阈值输出搭配抽取结果。  
 			- 对sogou.com的1亿多个中文页面语料库数据进行实验。预处理得搭配候选二元组35万个，自动获取搭配词对3.5万个。人工验证得效果比互信息法好。  
-		2.6 [多策略融合的搭配抽取方法。](http://www.sogou.com/labs/paper/Wangdaliang_JoTHU_08.pdf)  
+		2.6 多策略融合的搭配抽取方法。(http://www.sogou.com/labs/paper/Wangdaliang_JoTHU_08.pdf)  
 			- 搭配抽取中，需要识别频繁二元组和稀疏二元组，而排除无关二元组。  
 			- 互信息法可作为二元组无关性的度量方法，用于排除大部分无关二元组。  
 			- 卡方检验法比t检验法更适合于刻画二元组的相关性，且能很好识别频繁二元组，但对稀疏二元组不行。  
